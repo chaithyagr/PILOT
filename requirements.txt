@@ -7,6 +7,5 @@ scipy==1.4.1
 torchvision==0.2.2.post3
 tensorflow==1.15.4
 tsp_solver2==0.3
-numpy==1.19.1
-skimage==0.0
+numpy==1.18.5
 tensorboardX==2.1

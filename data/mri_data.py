@@ -27,10 +27,9 @@ class SliceData(Dataset):
             files = files[:num_files]
         for fname in sorted(files):
             with h5py.File(fname, 'r') as data:
-                if data.attrs['acquisition'] == 'CORPD_FBK':   # should be 'CORPD_FBK' or 'CORPDFS_FBK'
-                    kspace = data['kspace']
-                    num_slices = kspace.shape[0]
-                    self.examples += [(fname, slice) for slice in range(5, num_slices-2)]
+                kspace = data['kspace']
+                num_slices = kspace.shape[0]
+                self.examples += [(fname, slice) for slice in range(5, num_slices-2)]
 
     def __len__(self):
         return len(self.examples)

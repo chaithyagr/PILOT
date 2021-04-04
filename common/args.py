@@ -20,7 +20,7 @@ class Args(argparse.ArgumentParser):
 
         # Data parameters
         self.add_argument('--data-path', type=pathlib.Path,
-                          default='/home/tomerweiss/Datasets/pd_only/',help='Path to the dataset')
+                          default='/neurospin/optimed/Chaithya/Raw_Data/FastMRI/brain_multicoil_train',help='Path to the dataset')
         self.add_argument('--sample-rate', type=float, default=1.,
                           help='Fraction of total volumes to include')
         # Override defaults with passed overrides
